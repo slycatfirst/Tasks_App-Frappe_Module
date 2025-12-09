@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2025-12-02 05:33:14.996649",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-12-02 05:35:23.115587",
+ "modified_by": "Administrator",
+ "module": "Tasks App",
+ "name": "ganttpage",
+ "owner": "Administrator",
+ "page_name": "ganttpage",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "gantt"
+}

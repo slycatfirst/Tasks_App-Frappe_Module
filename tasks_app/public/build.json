@@ -1,0 +1,8 @@
+{
+    "js": [
+        "../../frappe/node_modules/frappe-gantt/dist/frappe-gantt.js"
+    ],
+    "css": [
+        "../../frappe/node_modules/frappe-gantt/dist/frappe-gantt.css"
+    ]
+}

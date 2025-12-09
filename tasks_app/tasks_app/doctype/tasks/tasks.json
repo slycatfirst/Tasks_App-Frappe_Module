@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-13 21:05:56.790912",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "user",
+  "project",
+  "status",
+  "progress",
+  "date_start",
+  "date_end",
+  "description",
+  "archive",
+  "depends_on",
+  "depends_on_tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "\u041d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0430",
+   "options": "User"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "\u041f\u0440\u043e\u0435\u043a\u0442",
+   "options": "Project"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435"
+  },
+  {
+   "default": "\u0412 \u043e\u0436\u0438\u0434\u0430\u043d\u0438\u0438",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "\u0421\u0442\u0430\u0442\u0443\u0441 \u0437\u0430\u0434\u0430\u0447\u0438"
+  },
+  {
+   "default": "0",
+   "fieldname": "archive",
+   "fieldtype": "Check",
+   "label": "\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c"
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "label": "%\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441"
+  },
+  {
+   "fieldname": "date_start",
+   "fieldtype": "Date",
+   "label": "\u0414\u0430\u0442\u0430 \u043d\u0430\u0447\u0430\u043b\u0430"
+  },
+  {
+   "fetch_from": "depends_on.depends_on",
+   "fieldname": "depends_on_tasks",
+   "fieldtype": "Code",
+   "label": "depends3321",
+   "read_only": 1
+  },
+  {
+   "fieldname": "depends_on",
+   "fieldtype": "Table",
+   "label": "table",
+   "options": "Tasks Depends Custom"
+  },
+  {
+   "fieldname": "date_end",
+   "fieldtype": "Date",
+   "label": "\u0414\u0430\u0442\u0430 \u043e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u044f"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-05 09:52:40.937670",
+ "modified_by": "Administrator",
+ "module": "Tasks App",
+ "name": "tasks",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "title",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}

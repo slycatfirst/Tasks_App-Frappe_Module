@@ -1,0 +1,40 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Tasks-list\"}}]",
+ "creation": "2025-12-01 05:39:20.685427",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table_2",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Tasks-list",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "title",
+   "link_count": 0,
+   "link_to": "tasks",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-12-01 05:40:12.781912",
+ "modified_by": "Administrator",
+ "module": "Tasks App",
+ "name": "Tasks-list",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [],
+ "title": "Tasks-list"
+}

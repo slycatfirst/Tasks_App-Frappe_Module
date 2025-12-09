@@ -4,6 +4,15 @@ app_publisher = "n"
 app_description = "App for tasks"
 app_email = "n@e.com"
 app_license = "mit"
+scheduler_events = {
+    "daily": [
+        "tasks_app.api.email_api.notify_overdue_tasks"
+    ]
+}
+
+app_include_js = [
+    "assets/tasks_app/js/gantt.js"
+]
 
 # Apps
 # ------------------

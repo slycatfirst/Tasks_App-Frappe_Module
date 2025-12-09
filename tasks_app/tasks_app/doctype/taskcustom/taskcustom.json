@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-05 09:54:10.673824",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "date_start",
+  "date_end",
+  "progress",
+  "parent_task",
+  "color",
+  "depends_on",
+  "depends_on_tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "title"
+  },
+  {
+   "bold": 1,
+   "fieldname": "date_start",
+   "fieldtype": "Date",
+   "label": "date start",
+   "search_index": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "date_end",
+   "fieldtype": "Date",
+   "label": "date end",
+   "search_index": 1
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Select",
+   "label": "progress",
+   "options": "0\n30\n80\n100",
+   "search_index": 1
+  },
+  {
+   "fieldname": "parent_task",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "parent task",
+   "options": "TaskCustom",
+   "search_index": 1
+  },
+  {
+   "fieldname": "depends_on",
+   "fieldtype": "Table",
+   "label": "Dependent Tasks",
+   "options": "Tasks Depends Custom"
+  },
+  {
+   "fieldname": "depends_on_tasks",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "depends_on_tasks"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "color"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2025-12-09 10:03:18.611044",
+ "modified_by": "Administrator",
+ "module": "Tasks App",
+ "name": "TaskCustom",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "date_start, date_end, progress",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}
