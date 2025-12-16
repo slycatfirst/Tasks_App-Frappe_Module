@@ -39,11 +39,31 @@ frappe.views.GanttView = class GanttView extends frappe.views.ListView {
 
 		this.tasks = this.data.map(function (item) {
 			// set progress
-			var progress = 0;
-			if (field_map.progress && $.isFunction(field_map.progress)) {
-				progress = field_map.progress(item);
-			} else if (field_map.progress) {
-				progress = item[field_map.progress];
+			let progress = 0;
+			// if (field_map.progress && $.isFunction(field_map.progress)) {
+			// 	progress = field_map.progress(item);
+			// } else if (field_map.progress) {
+			// 	progress = item[field_map.progress];
+			// }
+			if (field_map.progress){	
+				console.log(item[field_map.progress]);
+				switch (item[field_map.progress]) {
+					case "В ожидании":
+						progress = 0;
+						break;
+					case "В работе":
+						progress = 30;
+						break;
+					case "Выполнена":
+						progress = 80;
+						break;
+					case "Принята":
+						progress = 100;
+						break;
+					case "Отклонена":
+						progress = 100;
+						break;
+				}
 			}
 
 			// title
@@ -56,6 +76,7 @@ frappe.views.GanttView = class GanttView extends frappe.views.ListView {
 				label = item[field_map.title];
 			}
 
+
 			var r = {
 				start: item[field_map.start],
 				end: item[field_map.end],
@@ -63,9 +84,18 @@ frappe.views.GanttView = class GanttView extends frappe.views.ListView {
 				id: item[field_map.id || "name"],
 				doctype: me.doctype,
 				progress: progress,
-				dependencies: item[field_map.depends_task] || "",
+				dependencies: item.depends_on_tasks || "",
 			};
-
+			console.log(r);
+			// if (me.doctype === "TaskCustom") {
+			// 	// Берём данные из вашего child table
+			// 	if (item.parent_tasks) {
+			// 		r.dependencies = item.parent_tasks.map(d => d.task).join(",");
+			// 	} else {
+			// 		r.dependencies = "";
+			// 	}
+			// }
+			console.log(r.name, r.dependencies);
 			if (item.color && frappe.ui.color.validate_hex(item.color)) {
 				r["custom_class"] = "color-" + item.color.substr(1);
 			}

@@ -2,49 +2,59 @@
  "actions": [],
  "allow_rename": 1,
  "creation": "2025-12-05 09:54:10.673824",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "title",
-  "date_start",
-  "date_end",
-  "progress",
   "parent_task",
+  "assigned_to",
+  "section_break_xfhc",
+  "date_start",
+  "progress",
+  "column_break_xckq",
+  "date_end",
   "color",
+  "section_break_jvil",
   "depends_on",
-  "depends_on_tasks"
+  "depends_on_tasks",
+  "child_tasks",
+  "child_code"
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "title",
    "fieldtype": "Data",
    "in_global_search": 1,
-   "label": "title"
+   "label": "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438:",
+   "width": "100%"
   },
   {
    "bold": 1,
    "fieldname": "date_start",
    "fieldtype": "Date",
-   "label": "date start",
+   "label": "\u0414\u0430\u0442\u0430 \u043d\u0430\u0447\u0430\u043b\u0430 \u0437\u0430\u0434\u0430\u0447\u0438:",
    "search_index": 1
   },
   {
    "bold": 1,
    "fieldname": "date_end",
    "fieldtype": "Date",
-   "label": "date end",
+   "label": "\u0414\u0430\u0442\u0430 \u043e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u044f \u0437\u0430\u0434\u0430\u0447\u0438:",
    "search_index": 1
   },
   {
    "fieldname": "progress",
    "fieldtype": "Select",
-   "label": "progress",
-   "options": "0\n30\n80\n100",
+   "label": "\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441:",
+   "options": "\u0412 \u043e\u0436\u0438\u0434\u0430\u043d\u0438\u0438\n\u0412 \u0440\u0430\u0431\u043e\u0442\u0435\n\u0412\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0430\n\u041f\u0440\u0438\u043d\u044f\u0442\u0430\n\u041e\u0442\u043a\u043b\u043e\u043d\u0435\u043d\u0430",
    "search_index": 1
   },
   {
    "fieldname": "parent_task",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_global_search": 1,
    "label": "parent task",
    "options": "TaskCustom",
@@ -53,44 +63,61 @@
   {
    "fieldname": "depends_on",
    "fieldtype": "Table",
-   "label": "Dependent Tasks",
+   "label": "\u0420\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438:",
    "options": "Tasks Depends Custom"
   },
   {
    "fieldname": "depends_on_tasks",
    "fieldtype": "Code",
-   "hidden": 1,
-   "label": "depends_on_tasks"
+   "label": "depends_on_tasks",
+   "read_only": 1
   },
   {
    "fieldname": "color",
    "fieldtype": "Color",
-   "label": "color"
+   "label": "\u0426\u0432\u0435\u0442 \u0437\u0430\u0434\u0430\u0447\u0438 \u0432 Gantt"
+  },
+  {
+   "fieldname": "child_tasks",
+   "fieldtype": "Table",
+   "label": "\u0414\u043e\u0447\u0435\u0440\u043d\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438:",
+   "options": "Taks Child Custom"
+  },
+  {
+   "fieldname": "child_code",
+   "fieldtype": "Code",
+   "label": "child_code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xfhc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xckq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jvil",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "\u0418\u0441\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c:",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2025-12-09 10:03:18.611044",
+ "modified": "2025-12-16 03:43:25.790379",
  "modified_by": "Administrator",
  "module": "Tasks App",
  "name": "TaskCustom",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "search_fields": "date_start, date_end, progress",

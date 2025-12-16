@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2025-12-05 04:08:29.926534",
+ "creation": "2025-12-16 03:23:31.789167",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -15,7 +15,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Task",
-   "options": "TaskCustom"
+   "options": "TaskCustom",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_knpo",
@@ -24,10 +25,10 @@
  ],
  "istable": 1,
  "links": [],
- "modified": "2025-12-15 11:56:13.238053",
+ "modified": "2025-12-16 03:29:46.544916",
  "modified_by": "Administrator",
  "module": "Tasks App",
- "name": "Tasks Depends Custom",
+ "name": "Taks Child Custom",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",

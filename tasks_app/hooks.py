@@ -13,6 +13,10 @@ scheduler_events = {
 app_include_js = [
     "assets/tasks_app/js/gantt.js"
 ]
+permission_query_conditions = {
+    "TaskCustom": "tasks_app.tasks_app.doctype.taskcustom.taskcustom.get_permission_query_conditions"
+}
+
 
 # Apps
 # ------------------

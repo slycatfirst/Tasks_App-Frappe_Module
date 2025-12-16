@@ -6,7 +6,7 @@ frappe.views.calendar["TaskCustom"] = {
         title: 'title',
         allDay: 'allDay',
         progress: 'progress',
-        depends_task: 'parent_task',
+        depends_task: 'depends_on',
     },
     gantt: {
         field_map: {
@@ -16,7 +16,7 @@ frappe.views.calendar["TaskCustom"] = {
             title: 'title',
             allDay: 'allDay',
             progress: 'progress',
-            depends_task: 'parent_task',
+            depends_task: 'depends_on',
 	    },
         order_by: 'date_start'
     },
