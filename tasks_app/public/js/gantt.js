@@ -70,7 +70,7 @@ frappe.views.GanttView = class GanttView extends frappe.views.ListView {
 			var label;
 			if (meta.title_field) {
 				label = item.progress
-					? __("{0} ({1}%)", [item[meta.title_field], item.progress])
+					? __("{0} ({1}%)", [item[meta.title_field], progress])
 					: __("{0} ({1})", [item[meta.title_field]]);
 			} else {
 				label = item[field_map.title];
